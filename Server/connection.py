@@ -32,7 +32,7 @@ def incoming_connection():
     while True:
         try:
             conn, addr = soc.accept()
-            sys_log("[connection] incoming connection from %s" % addr)
+            sys_log("[connection] incoming connection from %s" % addr[0])
             print_lock.acquire()
             sys_log("[connection] successfully connected to %s via port %s" % (addr[0], addr[1]))
             start_new_thread(threaded, (conn,))
