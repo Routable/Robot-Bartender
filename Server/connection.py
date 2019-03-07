@@ -8,7 +8,7 @@ soc = socket.socket()
 host = socket.gethostbyname(socket.gethostname())
 
 port = 12345
-soc.bind((host, port))
+soc.bind(('', port))
 soc.listen(5)
 
 
