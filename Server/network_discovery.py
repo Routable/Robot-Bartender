@@ -17,4 +17,4 @@ def discover_clients():
     while True:
         sys_log("[network_discovery] sending network broadcast on port %s" % broadcast_port)
         server.sendto(message, ('<broadcast>', broadcast_port))
-        time.sleep(10)
+        time.sleep(3)
