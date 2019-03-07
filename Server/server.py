@@ -2,7 +2,7 @@ import threading
 
 from drinks import drink_list
 from network_discovery import discover_clients
-from connection import incoming_connection
+from connection import incoming_connection, threaded
 from logger import sys_log
 
 

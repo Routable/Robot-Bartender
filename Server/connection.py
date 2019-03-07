@@ -34,9 +34,8 @@ def incoming_connection():
             conn, addr = soc.accept()
             sys_log("[connection] incoming connection from %s" % addr)
             print_lock.acquire()
-            sys_log("[connection] successfully connected to %s via port %s" % addr[0], addr[1])
+            sys_log("[connection] successfully connected to %s via port %s" % (addr[0], addr[1]))
             start_new_thread(threaded, (conn,))
-
         except:
             sys_log("[connection] a problem has occurred with the incoming connection. Closing connection.")
             print_lock.release()
