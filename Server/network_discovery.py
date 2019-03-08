@@ -9,12 +9,12 @@ def discover_clients():
     server.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
     server.settimeout(0.2)
     broadcast_port = 37020
-
+    sleep_time = 3
     message = b"application_password"
 
-    sys_log("[network_discovery] starting search for clients on network.")
+    sys_log("Starting Client Sniffing (%ss intervals)  -  [network_discovery.py, discover_clients]" % sleep_time)
 
     while True:
-        sys_log("[network_discovery] sending network broadcast on port %s" % broadcast_port)
+        #sys_log("Sending network broadcast on port %s  -  [network_discovery.py, discover_clients] " % broadcast_port)
         server.sendto(message, ('<broadcast>', broadcast_port))
-        time.sleep(3)
+        time.sleep(sleep_time)
