@@ -1,7 +1,7 @@
 import socket
 import select
 from logger import sys_log
-
+from pumps import bartender
 
 class Server:
     def __init__(self):
@@ -29,6 +29,8 @@ class Server:
         data.strip()
         sys_log("Database Request Received  -  [connection.py, get_message]")
 
+        print(data)
+
         if data == "receive_database":
             sys_log("Sending Database  -  [connection.py, get_message]")
             self.send_file("database", conn)
@@ -37,12 +39,18 @@ class Server:
             sys_log("Server Disconnecting")
             conn.close()
 
-    def GET(self):
-        reply = input("Reply: ")
-        return reply
+        elif data == "test_on":
+            b = bartender()
+            b.enable_pump(17)
+
+        else:
+            print(data)
+            sys_log("Something bad happened")
+
+
 
     def send_file(self, filename, conn):
-        with open("database", 'rb') as f:
+        with open("database.db", 'rb') as f:
             content = f.read()
 
         size = len(content)

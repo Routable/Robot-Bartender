@@ -5,19 +5,27 @@ from connection import Server
 
 if __name__ == '__main__':
 
-    sys_log("[Main - Bartender v0.1] Starting Network Services")
+    print("")
+    sys_log("[Main - Bartender v0.2] Starting Network Services")
+
+    # Thread started to send multicast UDP broadcasts on port 37020.
+    # When the client discovers the message, it will attempt to connect
+    # to our server via TCP on port 12345.
+
     discover_client_devices = threading.Thread(target=discover_clients)
     discover_client_devices.start()
 
-    s = Server()
-    sock = s.setup_server()
+    server = Server()
+    sock = server.setup_server()
 
     while True:
         try:
-            connection = s.setup_connection(sock)
-            s.get_message(connection)
+            connection = server.setup_connection(sock)
+            server.get_message(connection)
         except:
-          break
+            sys_log("Exception: there was a problem with the connection. "
+                    "The application will now quit. - [app.py, main]")
+            break
 
 
 

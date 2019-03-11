@@ -15,6 +15,6 @@ def discover_clients():
     sys_log("Starting Client Sniffing (%ss intervals)  -  [network_discovery.py, discover_clients]" % sleep_time)
 
     while True:
-        #sys_log("Sending network broadcast on port %s  -  [network_discovery.py, discover_clients] " % broadcast_port)
+        sys_log("Sending network broadcast on port %s  -  [network_discovery.py, discover_clients] " % broadcast_port)
         server.sendto(message, ('<broadcast>', broadcast_port))
         time.sleep(sleep_time)
