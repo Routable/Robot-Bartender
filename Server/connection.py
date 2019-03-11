@@ -1,7 +1,6 @@
 import socket
 import select
 from logger import sys_log
-from pumps import bartender
 
 class Server:
     def __init__(self):
@@ -24,28 +23,32 @@ class Server:
         return conn
 
     def get_message(self, conn):
-        data = conn.recv(1024)
-        data = data.decode(encoding='utf-8')
-        data.strip()
-        sys_log("Database Request Received  -  [connection.py, get_message]")
+        while True:
+            data = conn.recv(1024)
+            data = data.decode(encoding='utf-8')
+            data.strip()
 
-        print(data)
+            sys_log("Received command: %s. [connection.py, get_message]" % data)
 
-        if data == "receive_database":
-            sys_log("Sending Database  -  [connection.py, get_message]")
-            self.send_file("database", conn)
+            if data == "receive_database":
+                sys_log("Sending Database  -  [connection.py, get_message]")
+                self.send_file("database", conn)
 
-        elif data == "QUIT":
-            sys_log("Server Disconnecting")
-            conn.close()
+            elif data == "quit":
+                sys_log("Server Disconnecting")
+                break
 
-        elif data == "test_on":
-            b = bartender()
-            b.enable_pump(17)
+            elif data == "test_on":
+                print("Turn on pin");
 
-        else:
-            print(data)
-            sys_log("Something bad happened")
+            elif data == "test_off":
+                print("Turn off pin!");
+
+            else:
+                print(data)
+                sys_log("Invalid Command Received [connection.py, get_message]")
+
+        conn.close()
 
 
 

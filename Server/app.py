@@ -22,7 +22,8 @@ if __name__ == '__main__':
         try:
             connection = server.setup_connection(sock)
             server.get_message(connection)
-        except:
+        except Exception as e:
+            print(e)
             sys_log("Exception: there was a problem with the connection. "
                     "The application will now quit. - [app.py, main]")
             break

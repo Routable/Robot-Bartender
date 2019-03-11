@@ -44,22 +44,6 @@ public class ClientConnect {
 		scan.close();
 	}
 
-	public void chat() throws IOException 
-	{    
-		String response = "s";
-
-		System.out.println("Initiating Chat Sequence");
-		while(!response.equals("QUIT")){
-			System.out.print("Client: ");
-			String message = scan.nextLine();
-			send(message);
-			if(message.equals("QUIT"))
-				break;
-			response = recv();
-			System.out.println("Server: " + response);
-		}
-		closeConnections();
-	}
 
 	// Request a specific file from the server
 	public void getFile(String filename)
@@ -85,13 +69,15 @@ public class ClientConnect {
 			int size = ByteBuffer.wrap(size_buff).asIntBuffer().get();
 			System.out.format("Expecting %d bytes\n", size);
 			pout.write(size_buff);
-
+			System.out.println("Test");
 			// Get content in bytes and write to a file
 			byte[] buffer = new byte[8192];
 
-			for(int counter=0; (counter = din.read(buffer, 0, buffer.length)) >= 0;){
-				fos.write(buffer, 0, counter);
-			}
+			for(int counter=0; (counter = din.read(buffer, 0, buffer.length)) > 0;){
+                fos.write(buffer, 0, counter);
+                break;
+            }
+			
 			fos.flush();
 			fos.close();
 
