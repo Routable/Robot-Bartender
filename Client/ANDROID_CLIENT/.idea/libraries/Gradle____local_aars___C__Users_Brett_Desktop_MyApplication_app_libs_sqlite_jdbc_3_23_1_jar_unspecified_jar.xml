@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: __local_aars__:C.\Users\Brett\Desktop\MyApplication\app\libs\sqlite-jdbc-3.23.1.jar:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/sqlite-jdbc-3.23.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

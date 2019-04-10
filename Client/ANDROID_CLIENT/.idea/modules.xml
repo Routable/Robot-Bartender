@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mysql-connector-java-5.1.38-bin/mysql-connector-java-5.1.38-bin.iml" filepath="$PROJECT_DIR$/mysql-connector-java-5.1.38-bin/mysql-connector-java-5.1.38-bin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sqlite-jdbc-3.23.1/sqlite-jdbc-3.23.1.iml" filepath="$PROJECT_DIR$/sqlite-jdbc-3.23.1/sqlite-jdbc-3.23.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sqlite-jdbc-3.7.2/sqlite-jdbc-3.7.2.iml" filepath="$PROJECT_DIR$/sqlite-jdbc-3.7.2/sqlite-jdbc-3.7.2.iml" />
+    </modules>
+  </component>
+</project>
