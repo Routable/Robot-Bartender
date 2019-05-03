@@ -5,6 +5,15 @@ The Robotic Bartender runs a custom made server developed with Python, and inter
 
 https://drive.google.com/file/d/1XOGtY40bHGt-k4TGSvgmpAIcdkSkHoVQ/view
 
+Please note that the code posted here is not our final build, as we have decided to keep this private due to financial interests from a third party organization. This being said, we wanted to showcase parts of the project in hopes that we can inspire others. 
+
+## Missing components include:
+ - Web Server API Code and Demo
+ - Node.JS Code (The project was switched to Node.JS from Flask/Python Server for compatability and performance requirements)
+ - Completed Android Application
+
+The code available however, is fully working with Android phones, and has a small drink database populated for testing, and can be used by those looking to build their own version.
+
 # Wiring Diagram
 ![Annotation 2019-05-03 120551](https://user-images.githubusercontent.com/15949137/57159903-24215200-6d9c-11e9-9cbd-f0ea46b63e96.jpg)
 
