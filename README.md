@@ -24,5 +24,5 @@ The Robotic Bartender runs a custom made server developed with Python, and inter
 
 # The Final Product
 ![Annotation 2019-05-03 120706](https://user-images.githubusercontent.com/15949137/57159919-27b4d900-6d9c-11e9-8761-0e0aeabe88f4.jpg)
+<source src="https://drive.google.com/file/d/1XOGtY40bHGt-k4TGSvgmpAIcdkSkHoVQ/preview" type='video/mp4'>
 
-<iframe src="https://drive.google.com/file/d/1XOGtY40bHGt-k4TGSvgmpAIcdkSkHoVQ/preview" width="640" height="480"></iframe>
