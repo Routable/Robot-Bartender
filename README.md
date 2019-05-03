@@ -3,6 +3,8 @@ The Robot Bartender is a project created to have a deeper understanding of lower
 
 The Robotic Bartender runs a custom made server developed with Python, and interfaces with Android devices running on Java. An issue found during the development of the project shows that Multicast requests are not able to be received on newer Android versions, even with correct permission settings, forcing a manual connection via direct IP, or the use of POST requests sent via a webserver effectively acting as our API. 
 
+https://drive.google.com/file/d/1XOGtY40bHGt-k4TGSvgmpAIcdkSkHoVQ/view
+
 # Wiring Diagram
 ![Annotation 2019-05-03 120551](https://user-images.githubusercontent.com/15949137/57159903-24215200-6d9c-11e9-9cbd-f0ea46b63e96.jpg)
 
