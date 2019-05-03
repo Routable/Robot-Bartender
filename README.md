@@ -14,6 +14,15 @@ Please note that the code posted here is not our final build, as we have decided
 
 The code available however, is fully working with Android phones, and has a small drink database populated for testing, and can be used by those looking to build their own version.
 
+## Parts List:
+- 12V Power Supply
+- 5V Dropdown Voltage Regulator
+- x6 Peristaltic Pumps
+- x6 Flyback Diodes
+- 8 Channel Relay Switch
+- Raspberry Pi B+ (Zero would be acceptable)
+- Misc. Parts: Wire, Soldering Supplies, LED, lumber, paint, nails, screws, etc.
+
 # Wiring Diagram
 ![Annotation 2019-05-03 120551](https://user-images.githubusercontent.com/15949137/57159903-24215200-6d9c-11e9-9cbd-f0ea46b63e96.jpg)
 
